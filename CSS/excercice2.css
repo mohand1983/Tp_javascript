@@ -1,0 +1,16 @@
+body{
+    background-color: aqua;
+}
+header{
+    margin-top: 10%;
+    text-align: center;
+   
+}
+p{
+    border-radius: 20px;
+    border: 1px solid;
+    padding:0 10px;
+}
+button{
+    margin-left: 20px;
+}

@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+    color: blue;
+    text-decoration: underline;
+}
+p{
+    text-align: center;
+    border: 1px solid;
+    border-radius: 20px;
+    background-color: aqua;
+    margin-top: 25%;
+}
+body{
+    background-color: aliceblue;
+}
