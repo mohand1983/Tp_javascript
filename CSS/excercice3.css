@@ -5,8 +5,8 @@ body{
     background-color: aqua;
 }
 select{
-    text-align: center;
     width: 400px;
-    text-align-last: center;
+    display: block;
+    margin: 0 auto;
 
 }

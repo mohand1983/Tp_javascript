@@ -29,40 +29,38 @@ const header = createDOMElement("header", "", document.body);
 
 
 const boutonCompetences = createDOMElement("button", "Compétences", header, [{ name: "id", value: "btn-skills" }]);
-const boutonExperience= createDOMElement("button", "Expérience", header, [{ name: "id", value: "btn-experience" }]);
+const boutonExperience = createDOMElement("button", "Expérience", header, [{ name: "id", value: "btn-experience" }]);
 const boutonFormation = createDOMElement("button", "Formation", header, [{ name: "id", value: "btn-training" }]);
 
-//création d'une balise h1 après un clic sur le premier bouton 
+const main = createDOMElement("main", "", document.body, [{ name: "id", value: "zone_affichage" }]);
 
-boutonCompetences.onclick = function () {
+//Création d'une balise h1 et un paragraphe après un clic sur le premier bouton 
+boutonCompetences.addEventListener("click", () => {
 
-    const h1 = createDOMElement("h1", "Compétences :", document.body);
+    const h1 = createDOMElement("h1", "Compétences :", main, [{ name: "id", value: "h1_Competences" }]);
 
     const Longtext = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro blanditiis tempora pariatur sint doloribus. Animi possimus, nulla corporis commodi explicabo id aspernatur placeat sapiente excepturi perferendis rerum ipsa cumque corrupti. Dolorem numquam veniam cum nulla est id ex quisquam, sit fugiat dicta nostrum quo, inventore reiciendis quia suscipit tenetur fugit repudiandae expedita totam voluptas.Blanditiis beatae praesentium in deserunt error.Consequuntur aliquam fuga veritatis dolor atque! Perferendisvoluptatum quod ipsa nulla consequatur esse quaerat unde nesciunt. Quam tenetur quia blanditiis voluptatibus, ipsam deleniti minuslaboriosam, animi ipsum, dicta similique quis ?Soluta facilis minus, quam unde excepturi fugiat quisquam eos cumque!Beatae similique rem facere consectetur! Nemo magni aliquam, corrupti maxime voluptatum odio quam aliquid mollitia ex vero excepturi maiores quis."
 
-    const p = createDOMElement("p", Longtext, document.body);
-    
-    //(p.style.visibility = "hidden") && (h1.style.visibility = "hidden");
-    
-}
+    const p = createDOMElement("p", Longtext, main, [{ name: "id", value: "p_Competences" }]);
 
+});
 //création de la balise main et et un titre de niveau h1  ayant pour intitulé Expériences
 
-    const main = createDOMElement("main", "", document.body);
-boutonExperience.onclick = function () {
 
-    const h1 = createDOMElement("h1", "Expérience :", main);
+boutonExperience.addEventListener("click", () => {
+    const h1 = createDOMElement("h1", "Expérience :", main, [{ name: "id", value: "h1_experience" }]);
     const Longtext2 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro blanditiis tempora pariatur sint doloribus. Animi possimus, nulla corporis commodi explicabo id aspernatur placeat sapiente excepturi perferendis rerum ipsa cumque corrupti. Dolorem numquam veniam cum nulla est id ex quisquam, sit fugiat dicta nostrum quo, inventore reiciendis quia suscipit tenetur fugit repudiandae expedita totam voluptas.Blanditiis beatae praesentium in deserunt error.Consequuntur aliquam fuga veritatis dolor atque! Perferendisvoluptatum quod ipsa nulla consequatur esse quaerat unde nesciunt. Quam tenetur quia blanditiis voluptatibus, ipsam deleniti minuslaboriosam, animi ipsum, dicta similique quis ?Soluta facilis minus, quam unde excepturi fugiat quisquam eos cumque!Beatae similique rem facere consectetur! Nemo magni aliquam, corrupti maxime voluptatum odio quam aliquid mollitia ex vero excepturi maiores quis."
-    const p = createDOMElement("p", Longtext2, main);
-}
-//création de la balise lain et et un titre de niveau h1  ayant pour intitulé Expériences
+    const p = createDOMElement("p", Longtext2, main, [{ name: "id", value: "p_experience" }]);
+
+});
+//création d'un paragraphe et et un titre de niveau h1  ayant pour intitulé Expériences
 
 
-boutonFormation.onclick = function () {
-
-    const h1 = createDOMElement("h1", "Formation :", main);
+boutonFormation.addEventListener("click", () => {
+    main.style.display = "block";
+    const h1 = createDOMElement("h1", "Formation :", main, [{ name: "id", value: "h1_Formation" }]);
     const Longtext3 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro blanditiis tempora pariatur sint doloribus. Animi possimus, nulla corporis commodi explicabo id aspernatur placeat sapiente excepturi perferendis rerum ipsa cumque corrupti. Dolorem numquam veniam cum nulla est id ex quisquam, sit fugiat dicta nostrum quo, inventore reiciendis quia suscipit tenetur fugit repudiandae expedita totam voluptas.Blanditiis beatae praesentium in deserunt error.Consequuntur aliquam fuga veritatis dolor atque! Perferendisvoluptatum quod ipsa nulla consequatur esse quaerat unde nesciunt. Quam tenetur quia blanditiis voluptatibus, ipsam deleniti minuslaboriosam, animi ipsum, dicta similique quis ?Soluta facilis minus, quam unde excepturi fugiat quisquam eos cumque!Beatae similique rem facere consectetur! Nemo magni aliquam, corrupti maxime voluptatum odio quam aliquid mollitia ex vero excepturi maiores quis."
-    const p = createDOMElement("p", Longtext3, main);
-}
+    const p = createDOMElement("p", Longtext3, main, [{ name: "id", value: "p_formation" }]);
+});
 
 
